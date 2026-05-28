@@ -4,13 +4,17 @@ extends CharacterBody2D
 const speed = 100
 # wether the enemy is in the Detection Area
 var player_chase = false
-# idk what i did i make it and it work
+# when player exit the player _chase will be false
 var player = null
-# this shit is the broken part idk how to make the enemy go idle when starting the game
+# this shit is the brokem part idk how to make the enemy go idle when starting the game
+@onready var amimated_sprite = $AnimatedSprite2D
+
+
+
 func _ready():
-	$AnimatedSprite2D.play("idle")
 	player_chase = false
-	
+	$AnimatedSprite2D.play("idle")
+	print("Started idle")
 
 
 func _physics_process(delta):
@@ -18,31 +22,35 @@ func _physics_process(delta):
 	if player_chase and player != null:
 
 		var direction = (player.position - position).normalized()
-		
+
 		position += direction * speed * delta
 
-		# Only change to Run  (im dying at the moment lolz)
+		# Only change to Run if not already playing
 		if $AnimatedSprite2D.animation != "Run":
 			$AnimatedSprite2D.play("Run")
 
-		# Flip sprite to other side if player goes on its right or left (exactly what it says oWo)
+		# Flip sprite (exactly what it says)
 		if direction.x < 0:
 			$AnimatedSprite2D.flip_h = true
 		elif direction.x > 0:
 			$AnimatedSprite2D.flip_h = false
 
 	else:
-
-		# Only change to idle  ( I NEED SLEEP FAHHHHHHHHHHHHHH)
-		if $AnimatedSprite2D.animation != "idle":
-			$AnimatedSprite2D.play("idle")
+		velocity.x = 0
+		velocity.y = 0
+		amimated_sprite.play("idle")
+	move_and_slide()
 
 
 func _on_detection_area_body_entered(body):
+
+	print("Something entered: ", body.name)
+
+	if body.is_in_group("player"):
 		player = body
 		player_chase = true
 
-func _on_detection_area_body_exited(_body):
+func _on_detection_area_body_exited(body):
 
 		player = null
 		player_chase = false
