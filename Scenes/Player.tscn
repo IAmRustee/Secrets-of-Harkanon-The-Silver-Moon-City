@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0tuulimgmxs0"]
 
-[ext_resource type="Script" uid="uid://by1cdgegutdbj" path="res://Knight.gd" id="1_kyqiw"]
+[ext_resource type="Script" uid="uid://by1cdgegutdbj" path="res://Scripts/Knight.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://col140yg6v1de" path="res://Assets/brackeys_platformer_assets/sprites/knight.png" id="2_gntrk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kyqiw"]

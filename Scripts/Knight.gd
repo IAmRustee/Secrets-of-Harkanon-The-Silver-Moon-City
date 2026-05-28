@@ -4,10 +4,10 @@ extends CharacterBody2D
 const SPEED = 175.0
 @onready var amimated_sprite = $AnimatedSprite2D
 
-func _physics_process(delta: float) -> void:
-	Player_Movement(delta)
+func _physics_process(_delta: float) -> void:
+	Player_Movement(_delta)
 	
-func Player_Movement(delta):
+func Player_Movement(_delta):
 	
 	if Input.is_action_pressed("Move_right"):
 		velocity.x = SPEED

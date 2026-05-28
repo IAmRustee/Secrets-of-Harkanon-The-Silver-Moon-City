@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d13tp4iaff5ls"]
 
-[ext_resource type="Script" uid="uid://beksgx845nusp" path="res://Scenes/Goblin.gd" id="1_db156"]
+[ext_resource type="Script" uid="uid://beksgx845nusp" path="res://Scripts/Goblin.gd" id="1_db156"]
 [ext_resource type="Texture2D" uid="uid://dpwgh26dfw5b2" path="res://Assets/Sprites/Goblin Run.png" id="2_ea0a1"]
 [ext_resource type="Texture2D" uid="uid://3vawtwhy7djv" path="res://Assets/Sprites/Idle goblin.png" id="2_mt4be"]
 
@@ -88,6 +88,7 @@ script = ExtResource("1_db156")
 position = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_428mb")
 animation = &"idle"
+frame_progress = 0.17337918
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=1271682546]
 collision_layer = 2
