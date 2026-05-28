@@ -3,9 +3,6 @@
 [ext_resource type="Script" uid="uid://beksgx845nusp" path="res://Scenes/Goblin.gd" id="1_db156"]
 [ext_resource type="Texture2D" uid="uid://3vawtwhy7djv" path="res://Assets/Sprites/final goblin.png" id="2_mt4be"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wqigr"]
-radius = 14.035668
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_wqigr"]
 atlas = ExtResource("2_mt4be")
 region = Rect2(0, 0, 32, 32)
@@ -42,15 +39,33 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Goblin" type="CharacterBody2D" unique_id=346055443]
-script = ExtResource("1_db156")
+[sub_resource type="CircleShape2D" id="CircleShape2D_wqigr"]
+radius = 57.035076
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1867171177]
-position = Vector2(1, 0)
-shape = SubResource("CircleShape2D_wqigr")
+[sub_resource type="CircleShape2D" id="CircleShape2D_db156"]
+radius = 16.03122
+
+[node name="Goblin" type="CharacterBody2D" unique_id=346055443]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_db156")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1032065611]
 position = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_428mb")
 animation = &"idle"
-frame_progress = 0.36449105
+frame_progress = 0.6898741
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1271682546]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1867171177]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_wqigr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1976404052]
+shape = SubResource("CircleShape2D_db156")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
