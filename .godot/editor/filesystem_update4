@@ -1,1 +1,5 @@
 res://Scenes/world.tscn
+res://Scenes/Goblin.tscn
+res://Scenes/Goblin.gd
+res://Scenes/Goblins.tscn
+res://Scenes/Player.tscn

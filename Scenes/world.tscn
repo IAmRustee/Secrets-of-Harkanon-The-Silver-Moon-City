@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ds8vugu8uejxt" path="res://Assets/brackeys_platformer_assets/sprites/platforms.png" id="1_a02cp"]
 [ext_resource type="PackedScene" uid="uid://b0tuulimgmxs0" path="res://Scenes/Player.tscn" id="2_go701"]
+[ext_resource type="PackedScene" uid="uid://d13tp4iaff5ls" path="res://Scenes/Goblins.tscn" id="3_5a7ea"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a02cp"]
 texture = ExtResource("1_a02cp")
@@ -24,8 +25,11 @@ sources/0 = SubResource("TileSetAtlasSource_a02cp")
 [node name="World" type="Node2D" unique_id=893178659]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=937261757]
-tile_map_data = PackedByteArray("AAAAAAEAAAAAAAAAAAABAAEAAAABAAAAAAACAAEAAAACAAAAAAABAP//AAAAAAAAAAACAP//AAABAAAAAAADAP//AAACAAAAAAADAAEAAAAAAAAAAAAEAAEAAAABAAAAAAAFAAEAAAACAAAAAAADAAIAAAAAAAAAAAAEAAIAAAABAAAAAAAFAAIAAAACAAAAAAAFAP//AAAAAAAAAAAGAP//AAABAAAAAAAHAP//AAACAAAAAAAAAAMAAAAAAAAAAAABAAMAAAABAAAAAAACAAMAAAACAAAAAAADAAQAAAAAAAAAAAAEAAQAAAABAAAAAAAFAAQAAAACAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAAEAAAAAAAAAAAABAAEAAAABAAAAAAACAAEAAAACAAAAAAADAAEAAAAAAAAAAAAEAAEAAAABAAAAAAAFAAEAAAACAAAAAAADAAIAAAAAAAAAAAAEAAIAAAABAAAAAAAFAAIAAAACAAAAAAAAAAMAAAAAAAAAAAABAAMAAAABAAAAAAACAAMAAAACAAAAAAADAAQAAAAAAAAAAAAEAAQAAAABAAAAAAAFAAQAAAACAAAAAAA=")
 tile_set = SubResource("TileSet_go701")
 
-[node name="CharacterBody2D" parent="." unique_id=1853977607 instance=ExtResource("2_go701")]
-position = Vector2(7, 3)
+[node name="CharacterBody2D2" parent="." unique_id=175845049 instance=ExtResource("3_5a7ea")]
+position = Vector2(87, 8)
+
+[node name="Player" parent="." unique_id=1853977607 instance=ExtResource("2_go701")]
+position = Vector2(-148, -19)
