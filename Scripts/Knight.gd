@@ -26,12 +26,14 @@ func Player_Movement(_delta):
 		velocity.y = -SPEED
 		velocity.x = 0
 		amimated_sprite.play("run")
+	elif Input.is_action_pressed("Attack"):
+		amimated_sprite.play("Attack")
+		get_node("CollisionShape2D").disabled = false 
 	else:
 		velocity.x = 0
 		velocity.y = 0
 		amimated_sprite.play("idle")
 	move_and_slide()
 	
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("Attack"):
-		$AnimatedSprite2D.play("Attack")
+func _ready() -> void:
+	get_node("CollisionShape2D").disabled = false

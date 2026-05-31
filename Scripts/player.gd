@@ -1,5 +1,5 @@
 extends Node2D
-
+var player = null
 const DRAG_FACTOR := 15.0
 const SPEED = 175.0
 
@@ -14,21 +14,6 @@ func _physics_process(delta: float) -> void:
 	var steering := desired_velocity - _velocity
 	_velocity += steering * DRAG_FACTOR * delta
 	translate(_velocity * delta)
-	Player_Movement(delta)
-func Player_Movement(_delta):
-	
-	
-	if Input.is_action_pressed("Move_right"):
-		$AnimationPlayer.play("run")
-	elif Input.is_action_pressed("Move_left"):
-		$AnimationPlayer.play("run")
-	elif Input.is_action_pressed("Move_down"):
-		$AnimationPlayer.play("run")
-	elif Input.is_action_pressed("Move_up"):
-		$AnimationPlayer.play("run")
-	else:
-		$AnimationPlayer.play("idle")
-
 
 
 func _unhandled_input(event: InputEvent) -> void:

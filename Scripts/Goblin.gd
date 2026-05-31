@@ -1,15 +1,14 @@
 extends CharacterBody2D
 
 # how fast the enemy is
-const speed = 75
+const speed = 100
 # wether the enemy is in the Detection Area
 var player_chase = false
 # when player exit the player _chase will be false
 var player = null
 # this shit is the brokem part idk how to make the enemy go idle when starting the game
 @onready var amimated_sprite = $AnimatedSprite2D
-@onready var _hp_progress_bar: ProgressBar = %HPProgressBar
-@onready var _animation_player: AnimationPlayer = %AnimationPlayer
+
 
 
 func _ready():
@@ -40,13 +39,7 @@ func _physics_process(delta):
 		velocity.x = 0
 		velocity.y = 0
 		amimated_sprite.play("idle")
-		move_and_slide()
-
-
-func take_damage(_amount: int) -> void:
-	print("Enemy hit!")
-	_animation_player.play("hit")
-
+	move_and_slide()
 
 
 func _on_detection_area_body_entered(body):
@@ -61,3 +54,7 @@ func _on_detection_area_body_exited(body):
 
 		player = null
 		player_chase = false
+func take_damage(_amount: int) -> void:
+	print("Enemy hit!")
+	$AnimatedSprite2D.play("hit")
+	

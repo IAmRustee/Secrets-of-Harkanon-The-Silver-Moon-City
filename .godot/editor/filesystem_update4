@@ -15,3 +15,6 @@ res://Scripts/players.gd
 res://Scripts/hurt_area_2d.gd
 res://Scripts/hit_area_2d.gd
 res://Scenes/HurtArea.gd
+res://Scripts/Player.tscn
+res://Scripts/player.tscn
+res://Scripts/player.gd

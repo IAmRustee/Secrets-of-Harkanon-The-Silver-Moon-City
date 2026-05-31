@@ -173,7 +173,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack",
-"speed": 9.0
+"speed": 14.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -288,7 +288,8 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ixxa"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1853977607 groups=["player"]]
-collision_layer = 3
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_kyqiw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1267780234]
@@ -297,17 +298,18 @@ shape = SubResource("CircleShape2D_kyqiw")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=113545724]
 sprite_frames = SubResource("SpriteFrames_r7xxa")
 animation = &"Attack"
-frame_progress = 0.7720819
+frame_progress = 0.3759778
 
 [node name="HitArea2D" type="Area2D" parent="AnimatedSprite2D" unique_id=269599095]
 rotation = -0.008416089
 collision_mask = 0
 script = ExtResource("4_dewec")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/HitArea2D" unique_id=529339117]
+[node name="Hitarea" type="CollisionShape2D" parent="AnimatedSprite2D/HitArea2D" unique_id=529339117]
 position = Vector2(20, 0)
 rotation = 0.0015837105
 shape = SubResource("CapsuleShape2D_5ixxa")
+disabled = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1710055101]
 zoom = Vector2(4, 4)

@@ -1,7 +1,7 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1780173215
+::res://::1780189954
+enemy.gd::GDScript::8864711884113261455::1780189954::0::1::::<>Node2D<><>0<>0<><>::
 icon.svg::CompressedTexture2D::9201833062556319371::1779921101::1779921152::1::::<><><>0<>0<>1814b24e384cd8a12f5b693abce042fd<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-enemy.gd::GDScript::8864711884113261455::1780173215::0::1::::<>Node2D<><>0<>0<><>::
 ::res://Assets/::1779943693
 ::res://Assets/brackeys_platformer_assets/::1779921101
 LICENSE & CREDITS.txt::TextFile::-1::1779921101::0::1::::<><><>0<>0<><>::
@@ -25,20 +25,22 @@ platforms.png::CompressedTexture2D::8492096822736505669::1779921101::1779921152:
 slime_green.png::CompressedTexture2D::3265368866597755635::1779921101::1779921152::1::::<><><>0<>0<>af1f45e8f09d71e01eb593667afe984c<>res://.godot/imported/slime_green.png-8cc09d545b659d66e348bf8ad658d30b.ctex::
 slime_purple.png::CompressedTexture2D::2639059556670142056::1779921101::1779921152::1::::<><><>0<>0<>fc014576e5a624bc2c6202ad037d3218<>res://.godot/imported/slime_purple.png-ba3f64ab05a179ce2adb7eb6759591b5.ctex::
 world_tileset.png::CompressedTexture2D::3005527686269548805::1779921101::1779921152::1::::<><><>0<>0<>bd6f9497403f123a8d6c878b48e06fc1<>res://.godot/imported/world_tileset.png-f8b17cc593f443d198f49f91b4f6b3e2.ctex::
-::res://Assets/Sprites/::1780174523
+::res://Assets/Sprites/::1780174524
 Goblin Run.png::CompressedTexture2D::8257889284916315221::1779974665::1779974665::1::::<><><>0<>0<>1ad39ed512187d3676c37cf0fd5c1317<>res://.godot/imported/Goblin Run.png-256c9d9eb7a00991a24a324b607c11af.ctex::
 Goblin.png::CompressedTexture2D::5311378739190293291::1780174523::1780174524::1::::<><><>0<>0<>bbfa13c2c6351f7a9700fba0209145a7<>res://.godot/imported/Goblin.png-d90f33a4bae5bf5c9f75bca182a13de7.ctex::
 Idle goblin.png::CompressedTexture2D::2008679874446801203::1779945407::1779974653::1::::<><><>0<>0<>a583de5023901622bba6627d73938330<>res://.godot/imported/Idle goblin.png-802861f5367595da402bdb80ec670d1a.ctex::
 knight 1.png::CompressedTexture2D::4672942883119755419::1780173557::1780173558::1::::<><><>0<>0<>a7d5254973b84c3a35bf9be8429c383b<>res://.godot/imported/knight 1.png-e48dfd93983d4bad1675e23044686bad.ctex::
 knight swinging finish.png::CompressedTexture2D::8561460994218106801::1780075865::1780075866::1::::<><><>0<>0<>88eb9f1f0d6f42d4d913a1f939527b1c<>res://.godot/imported/knight swinging finish.png-b4b2cf76b04580327aaf2c7051006d61.ctex::
-::res://Scenes/::1780172897
-Goblins.tscn::PackedScene::9043156508095457912::1780172897::0::1::::<><><>0<>0<><>::uid://beksgx845nusp::::res://Scripts/Goblin.gd<>uid://dpwgh26dfw5b2::::res://Assets/Sprites/Goblin Run.png<>uid://3vawtwhy7djv::::res://Assets/Sprites/Idle goblin.png<>uid://col140yg6v1de::::res://Assets/brackeys_platformer_assets/sprites/knight.png<>uid://dvyauottk3154::::res://Scripts/HurtArea2D.gd
-Player.tscn::PackedScene::4181615598373502489::1780172616::0::1::::<><><>0<>0<><>::uid://by1cdgegutdbj::::res://Scripts/Knight.gd<>uid://dt8ianta1m2s8::::res://Assets/Sprites/knight swinging finish.png<>uid://col140yg6v1de::::res://Assets/brackeys_platformer_assets/sprites/knight.png<>uid://cn81tw2sia7f6::::res://Scripts/HitArea2D.gd
-world.tscn::PackedScene::1790352801769938687::1780170963::0::1::::<><><>0<>0<><>::uid://ds8vugu8uejxt::::res://Assets/brackeys_platformer_assets/sprites/platforms.png<>uid://b0tuulimgmxs0::::res://Scenes/Player.tscn<>uid://d13tp4iaff5ls::::res://Scenes/Goblins.tscn
-::res://Scripts/::1780173423
-Goblin.gd::GDScript::2688924716792905195::1780172205::0::1::::<>CharacterBody2D<><>0<>0<><>::
-HitArea2D.gd::GDScript::5755034570512704713::1780172222::0::1::::HitArea2D<>Area2D<><>0<>0<><>::
-HurtArea2D.gd::GDScript::8682809315009469729::1780172235::0::1::::HurtArea2D<>Area2D<><>0<>0<><>::
-Knight.gd::GDScript::4124753865598088143::1780170963::0::1::::<>CharacterBody2D<><>0<>0<><>::
-enemy.tscn::PackedScene::8967670014096128181::1780173215::0::1::::<><><>0<>0<><>::uid://dykerlctcsr3d::::res://enemy.gd<>uid://cn81tw2sia7f6::::res://Scripts/HitArea2D.gd
-Players.tscn::PackedScene::801564610701234289::1780173423::0::1::::<><><>0<>0<><>::uid://cn81tw2sia7f6::::res://Scripts/HitArea2D.gd
+::res://Scenes/::1780189997
+Goblins.tscn::PackedScene::9043156508095457912::1780189683::0::1::::<><><>0<>0<><>::uid://beksgx845nusp::::res://Scripts/Goblin.gd<>uid://dpwgh26dfw5b2::::res://Assets/Sprites/Goblin Run.png<>uid://3vawtwhy7djv::::res://Assets/Sprites/Idle goblin.png<>uid://col140yg6v1de::::res://Assets/brackeys_platformer_assets/sprites/knight.png<>uid://blcrlxc6b653n::::res://Scenes/HurtArea.gd
+HurtArea.gd::GDScript::3163679764367311269::1780186325::0::1::::HurtArea<>Area2D<><>0<>0<><>::
+Player.tscn::PackedScene::4181615598373502489::1780189504::0::1::::<><><>0<>0<><>::uid://by1cdgegutdbj::::res://Scripts/Knight.gd<>uid://dt8ianta1m2s8::::res://Assets/Sprites/knight swinging finish.png<>uid://col140yg6v1de::::res://Assets/brackeys_platformer_assets/sprites/knight.png<>uid://ddbpfombltmj2::::res://Scripts/hit_area_2d.gd
+world.tscn::PackedScene::1790352801769938687::1780190025::0::1::::<><><>0<>0<><>::uid://ds8vugu8uejxt::::res://Assets/brackeys_platformer_assets/sprites/platforms.png<>uid://lojwf0k0pta4::::res://Scripts/Players.tscn<>uid://d13tp4iaff5ls::::res://Scenes/Goblins.tscn<>uid://d01ahkp77v7rl::::res://Scripts/enemy.tscn
+::res://Scripts/::1780189816
+enemy.tscn::PackedScene::8967670014096128181::1780189736::0::1::::<><><>0<>0<><>::uid://dykerlctcsr3d::::res://enemy.gd<>uid://chw4vqnsjkbrf::::res://Assets/Sprites/Goblin.png<>uid://blcrlxc6b653n::::res://Scenes/HurtArea.gd
+Goblin.gd::GDScript::2688924716792905195::1780189198::0::1::::<>CharacterBody2D<><>0<>0<><>::
+hit_area_2d.gd::GDScript::7372813397533932645::1780182504::0::1::::HitArea2D<>Area2D<><>0<>0<><>::
+hurt_area_2d.gd::GDScript::2092680069365828195::1780184389::0::1::::HurtArea2D<>Area2D<><>0<>0<><>::
+Knight.gd::GDScript::4124753865598088143::1780186838::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.gd::GDScript::3952109121157428394::1780187529::0::1::::<>Node2D<><>0<>0<><>::
+Players.tscn::PackedScene::801564610701234289::1780190016::0::1::::<><><>0<>0<><>::uid://b7tuxlwsfg6vv::::res://Assets/Sprites/knight 1.png<>uid://bwkowo0mws45k::::res://Scripts/player.gd<>uid://ddbpfombltmj2::::res://Scripts/hit_area_2d.gd<>uid://dt8ianta1m2s8::::res://Assets/Sprites/knight swinging finish.png<>uid://col140yg6v1de::::res://Assets/brackeys_platformer_assets/sprites/knight.png
