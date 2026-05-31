@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://col140yg6v1de" path="res://Assets/brackeys_platformer_assets/sprites/knight.png" id="2_gntrk"]
 [ext_resource type="Script" uid="uid://bdeq0hofnfi5h" path="res://Scenes/hand_actor.gd" id="4_5ixxa"]
 [ext_resource type="Script" uid="uid://ddbpfombltmj2" path="res://Scripts/hit_area_2d.gd" id="4_dewec"]
+[ext_resource type="Texture2D" uid="uid://c83xsvc38yln6" path="res://Assets/Sprites/sword.png" id="5_nn08x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kyqiw"]
 
@@ -305,14 +306,21 @@ frame_progress = 0.3759778
 zoom = Vector2(4, 4)
 
 [node name="HandActor" type="Node2D" parent="." unique_id=575100276]
-rotation = 0.7877475
+rotation = 0.06561816
 script = ExtResource("4_5ixxa")
 
-[node name="HitArea2D" type="Area2D" parent="HandActor" unique_id=269599095]
-rotation = 0.0141109
+[node name="Sprite2D" type="Sprite2D" parent="HandActor" unique_id=1083115551]
+position = Vector2(15.899994, -2.0469851)
+rotation = -0.08954861
+texture = ExtResource("5_nn08x")
+
+[node name="HitArea2D" type="Area2D" parent="HandActor/Sprite2D" unique_id=269599095]
+position = Vector2(-21.9937, -0.52641964)
+rotation = 0.09871074
+scale = Vector2(1.0000001, 1.0000001)
 collision_mask = 0
 script = ExtResource("4_dewec")
 
-[node name="Hitarea" type="CollisionShape2D" parent="HandActor/HitArea2D" unique_id=529339117]
+[node name="Hitarea" type="CollisionShape2D" parent="HandActor/Sprite2D/HitArea2D" unique_id=529339117]
 position = Vector2(21.99781, -0.3104295)
 shape = SubResource("CapsuleShape2D_5ixxa")

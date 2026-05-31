@@ -1,3 +1,4 @@
+Sprite2D
 Node2D
 CollisionShape2D
 Area2D
@@ -6,5 +7,4 @@ AnimatableBody2D
 AnimationPlayer
 HurtArea2D
 HitArea2D
-Sprite2D
 CharacterBody2D

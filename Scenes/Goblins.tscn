@@ -109,7 +109,7 @@ disabled = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1032065611]
 position = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_428mb")
-animation = &"idle"
+animation = &"hit"
 
 [node name="MyHurtBox" type="Area2D" parent="AnimatedSprite2D" unique_id=1123759625]
 position = Vector2(-1, -1)

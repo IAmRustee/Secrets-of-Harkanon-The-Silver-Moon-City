@@ -55,6 +55,7 @@ func _on_detection_area_body_exited(body):
 		player = null
 		player_chase = false
 func take_damage(_amount: int) -> void:
-	print("Enemy hit!")
 	$AnimatedSprite2D.play("hit")
+	print("Enemy hit!")
+	
 	
