@@ -1,5 +1,9 @@
+AnimatedSprite2D
+AnimatableBody2D
+AnimationPlayer
 CollisionShape2D
+HurtArea2D
+HitArea2D
+Sprite2D
 Area2D
 CharacterBody2D
-AnimatedSprite2D
-Sprite2D

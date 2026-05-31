@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
-
+var player = null
 const SPEED = 175.0
+var Player_Attack = true
 @onready var amimated_sprite = $AnimatedSprite2D
-
+var is_attacking = false
 func _physics_process(_delta: float) -> void:
 	Player_Movement(_delta)
-	
+
 func Player_Movement(_delta):
 	
 	if Input.is_action_pressed("Move_right"):
@@ -25,9 +26,12 @@ func Player_Movement(_delta):
 		velocity.y = -SPEED
 		velocity.x = 0
 		amimated_sprite.play("run")
-		
 	else:
 		velocity.x = 0
 		velocity.y = 0
 		amimated_sprite.play("idle")
 	move_and_slide()
+	
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("Attack"):
+		$AnimatedSprite2D.play("Attack")

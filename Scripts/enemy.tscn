@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://d01ahkp77v7rl"]
+
+[ext_resource type="Script" uid="uid://dykerlctcsr3d" path="res://enemy.gd" id="1_fwvss"]
+[ext_resource type="Texture2D" uid="uid://chw4vqnsjkbrf" path="res://Assets/Sprites/Goblin.png" id="2_ctlbi"]
+[ext_resource type="Script" uid="uid://blcrlxc6b653n" path="res://Scenes/HurtArea.gd" id="3_th514"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ctlbi"]
+radius = 20.09975
+
+[sub_resource type="Animation" id="Animation_th514"]
+length = 0.001
+loop_mode = 1
+
+[sub_resource type="Animation" id="Animation_ctlbi"]
+resource_name = "hit"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333333, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 2.1345376751890655, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_87t6w"]
+_data = {
+&"RESET": SubResource("Animation_th514"),
+&"hit": SubResource("Animation_ctlbi")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1185772006]
+script = ExtResource("1_fwvss")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=138363860]
+texture = ExtResource("2_ctlbi")
+
+[node name="HurtArea2D" type="Area2D" parent="." unique_id=1009225943]
+script = ExtResource("3_th514")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea2D" unique_id=1838931108]
+shape = SubResource("CircleShape2D_ctlbi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=223276478]
+libraries/ = SubResource("AnimationLibrary_87t6w")
