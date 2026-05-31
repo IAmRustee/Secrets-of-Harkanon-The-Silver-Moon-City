@@ -9,31 +9,46 @@ func _physics_process(_delta: float) -> void:
 	Player_Movement(_delta)
 
 func Player_Movement(_delta):
-	
+	velocity = Vector2.ZERO
 	if Input.is_action_pressed("Move_right"):
 		velocity.x = SPEED
 		amimated_sprite.play("run")
-		velocity.y = 0
+		$AnimatedSprite2D/HitArea2D/Hitarea.disabled = true
+
 	elif Input.is_action_pressed("Move_left"):
 		velocity.x = -SPEED
-		velocity.y = 0
 		amimated_sprite.play("run")
+		$AnimatedSprite2D/HitArea2D/Hitarea.disabled = true
+
 	elif Input.is_action_pressed("Move_down"):
 		velocity.y = SPEED
-		velocity.x = 0
 		amimated_sprite.play("run")
+		$AnimatedSprite2D/HitArea2D/Hitarea.disabled = true
+
 	elif Input.is_action_pressed("Move_up"):
 		velocity.y = -SPEED
-		velocity.x = 0
 		amimated_sprite.play("run")
+		$AnimatedSprite2D/HitArea2D/Hitarea.disabled = true
+
 	elif Input.is_action_pressed("Attack"):
 		amimated_sprite.play("Attack")
-		get_node("CollisionShape2D").disabled = false 
-	else:
-		velocity.x = 0
-		velocity.y = 0
-		amimated_sprite.play("idle")
-	move_and_slide()
+		$AnimatedSprite2D/HitArea2D/Hitarea.disabled = false
 	
-func _ready() -> void:
-	get_node("CollisionShape2D").disabled = false
+
+	else:
+			amimated_sprite.play("idle")
+			$AnimatedSprite2D/HitArea2D/Hitarea.disabled = true
+
+	move_and_slide()
+
+	
+func _ready():
+	var hitbox = get_node_or_null("AnimatedSprite2D/HitArea2D/Hitarea")
+
+	if hitbox:
+		$AnimatedSprite2D/HitArea2D/Hitarea.disabled = false
+	else:
+		print("Hitbox not found!")
+	for child in get_children():
+		print(child.name)
+	
