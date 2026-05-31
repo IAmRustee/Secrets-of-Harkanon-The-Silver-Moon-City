@@ -4,6 +4,8 @@ var player = null
 const SPEED = 175.0
 var Player_Attack = true
 @onready var amimated_sprite = $AnimatedSprite2D
+@onready var animation_player = $HandActor/Sprite2D/SwordSwing2D/AnimationPlayer
+@onready var sword_anim = $HandActor/Sprite2D/SwordAnmin
 var is_attacking = false
 func _physics_process(_delta: float) -> void:
 	Player_Movement(_delta)
@@ -31,6 +33,8 @@ func Player_Movement(_delta):
 		$HandActor/Sprite2D/HitArea2D/Hitarea.disabled = true
 
 	elif Input.is_action_pressed("Attack"):
+		animation_player.play("SwordSlash")
+		sword_anim.play("swordSwing")
 		$HandActor/Sprite2D/HitArea2D/Hitarea.disabled = false
 	
 
