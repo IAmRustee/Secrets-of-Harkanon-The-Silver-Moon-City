@@ -1,3 +1,4 @@
 res://Scenes/Player.tscn
-res://Scenes/Goblins.tscn
 res://Scripts/Knight.gd
+res://Scenes/hand_actor.gd
+res://Scripts/hit_area_2d.gd
