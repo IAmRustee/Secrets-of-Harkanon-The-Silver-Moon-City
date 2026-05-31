@@ -102,7 +102,9 @@ collision_mask = 2
 script = ExtResource("1_db156")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=172935935]
+rotation = 3.0673118
 shape = SubResource("CircleShape2D_rjpd7")
+disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1032065611]
 position = Vector2(1, 1)
