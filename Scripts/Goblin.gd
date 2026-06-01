@@ -8,7 +8,7 @@ var player_chase = false
 var player = null
 # this shit is the brokem part idk how to make the enemy go idle when starting the game
 @onready var amimated_sprite = $AnimatedSprite2D
-
+@onready var _hp_progress_bar: ProgressBar = %HPProgressBar
 
 
 func _ready():
@@ -50,11 +50,14 @@ func _on_detection_area_body_entered(body):
 		player = body
 		player_chase = true
 
-func _on_detection_area_body_exited(body):
+func _on_detection_area_body_exited(_body):
 
 		player = null
 		player_chase = false
-func take_damage(_amount: int) -> void:
+func take_damage(amount: int) -> void:
+	_hp_progress_bar.value = max(0, _hp_progress_bar.value - amount)
+	if _hp_progress_bar.value == 0:
+		queue_free()
 	$AnimatedSprite2D.play("hit")
 	print("Enemy hit!")
 	

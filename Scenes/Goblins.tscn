@@ -129,7 +129,25 @@ collision_mask = 2
 process_physics_priority = -1
 light_mask = 0
 position = Vector2(1, 0)
+scale = Vector2(1.8972057, 2.113708)
 shape = SubResource("CircleShape2D_wqigr")
+
+[node name="HPProgressBar" type="ProgressBar" parent="." unique_id=952220017]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.000015
+offset_top = -17.000006
+offset_right = 74.999985
+offset_bottom = 9.999994
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.60201097, 0.25422984)
+value = 100.0
+show_percentage = false
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
