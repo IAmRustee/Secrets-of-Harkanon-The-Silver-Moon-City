@@ -58,7 +58,6 @@ func take_damage(amount: int) -> void:
 	_hp_progress_bar.value = max(0, _hp_progress_bar.value - amount)
 	if _hp_progress_bar.value == 0:
 		queue_free()
-	$AnimatedSprite2D.play("hit")
 	print("Enemy hit!")
 	
 	

@@ -458,6 +458,8 @@ script = ExtResource("1_kyqiw")
 shape = SubResource("CircleShape2D_kyqiw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=113545724]
+position = Vector2(0.99999994, -2)
+scale = Vector2(1.5312501, 1.5)
 sprite_frames = SubResource("SpriteFrames_r7xxa")
 animation = &"Attack"
 frame_progress = 0.3759778
@@ -470,8 +472,9 @@ rotation = 0.06561816
 script = ExtResource("4_5ixxa")
 
 [node name="Sprite2D" type="Sprite2D" parent="HandActor" unique_id=1083115551]
-position = Vector2(15.899994, -2.0469851)
+position = Vector2(18.289816, -5.958906)
 rotation = -0.08954861
+scale = Vector2(0.82936954, 0.769842)
 texture = ExtResource("5_nn08x")
 
 [node name="HitArea2D" type="Area2D" parent="HandActor/Sprite2D" unique_id=269599095]

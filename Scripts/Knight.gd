@@ -12,35 +12,34 @@ func _physics_process(_delta: float) -> void:
 
 func Player_Movement(_delta):
 	velocity = Vector2.ZERO
+
+	# Movement
 	if Input.is_action_pressed("Move_right"):
-		velocity.x = SPEED
-		amimated_sprite.play("run")
-		$HandActor/Sprite2D/HitArea2D/Hitarea.disabled = true
+		velocity.x += SPEED
 
-	elif Input.is_action_pressed("Move_left"):
-		velocity.x = -SPEED
-		amimated_sprite.play("run")
-		$HandActor/Sprite2D/HitArea2D/Hitarea.disabled = true
+	if Input.is_action_pressed("Move_left"):
+		velocity.x -= SPEED
 
-	elif Input.is_action_pressed("Move_down"):
-		velocity.y = SPEED
-		amimated_sprite.play("run")
-		$HandActor/Sprite2D/HitArea2D/Hitarea.disabled = true
+	if Input.is_action_pressed("Move_down"):
+		velocity.y += SPEED
 
-	elif Input.is_action_pressed("Move_up"):
-		velocity.y = -SPEED
-		amimated_sprite.play("run")
-		$HandActor/Sprite2D/HitArea2D/Hitarea.disabled = true
+	if Input.is_action_pressed("Move_up"):
+		velocity.y -= SPEED
 
-	elif Input.is_action_pressed("Attack"):
+	# Movement animation
+	if velocity != Vector2.ZERO:
+		amimated_sprite.play("run")
+	else:
+		amimated_sprite.play("idle")
+
+	# Attack
+	if Input.is_action_pressed("Attack"):
 		animation_player.play("SwordSlash")
 		sword_anim.play("swordSwing")
 		$HandActor/Sprite2D/HitArea2D/Hitarea.disabled = false
-	
-
 	else:
-			amimated_sprite.play("idle")
-			$HandActor/Sprite2D/HitArea2D/Hitarea.disabled = true
+		$HandActor/Sprite2D/HitArea2D/Hitarea.disabled = true
+
 
 	move_and_slide()
 

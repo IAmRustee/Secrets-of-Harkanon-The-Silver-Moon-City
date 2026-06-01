@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1780273891
+::res://::1780343790
 enemy.gd::GDScript::8864711884113261455::1780195664::0::1::::<>Node2D<><>0<>0<><>::
 icon.svg::CompressedTexture2D::9201833062556319371::1779921101::1779921152::1::::<><><>0<>0<>1814b24e384cd8a12f5b693abce042fd<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 KnightSwordSlash.tscn::PackedScene::4847139261864020341::1780267640::0::1::::<><><>0<>0<><>::uid://0b2g45omwmuy::::res://Assets/Sprites/Sword Swing.png
@@ -34,17 +34,17 @@ knight 1.png::CompressedTexture2D::4672942883119755419::1780173557::1780173558::
 knight swinging finish.png::CompressedTexture2D::8561460994218106801::1780075865::1780075866::1::::<><><>0<>0<>88eb9f1f0d6f42d4d913a1f939527b1c<>res://.godot/imported/knight swinging finish.png-b4b2cf76b04580327aaf2c7051006d61.ctex::
 Sword Swing.png::CompressedTexture2D::1758437112447291168::1780267197::1780267198::1::::<><><>0<>0<>5ba1ce49a09ca007f4d4944048277de1<>res://.godot/imported/Sword Swing.png-e1c268f251ac7afce487c045d92fe659.ctex::
 sword.png::CompressedTexture2D::7148305527076070613::1780260123::1780260124::1::::<><><>0<>0<>76b5baeab7d094be4c8c5754f8d4cdfc<>res://.godot/imported/sword.png-592de964f347a2f78f681639f77bd886.ctex::
-::res://Scenes/::1780268875
-Goblins.tscn::PackedScene::9043156508095457912::1780260773::0::1::::<><><>0<>0<><>::uid://beksgx845nusp::::res://Scripts/Goblin.gd<>uid://dpwgh26dfw5b2::::res://Assets/Sprites/Goblin Run.png<>uid://3vawtwhy7djv::::res://Assets/Sprites/Idle goblin.png<>uid://col140yg6v1de::::res://Assets/brackeys_platformer_assets/sprites/knight.png<>uid://blcrlxc6b653n::::res://Scenes/HurtArea.gd
+::res://Scenes/::1780275597
+Goblins.tscn::PackedScene::9043156508095457912::1780275597::0::1::::<><><>0<>0<><>::uid://beksgx845nusp::::res://Scripts/Goblin.gd<>uid://dpwgh26dfw5b2::::res://Assets/Sprites/Goblin Run.png<>uid://3vawtwhy7djv::::res://Assets/Sprites/Idle goblin.png<>uid://col140yg6v1de::::res://Assets/brackeys_platformer_assets/sprites/knight.png<>uid://blcrlxc6b653n::::res://Scenes/HurtArea.gd
 hand_actor.gd::GDScript::2606261231890792251::1780251149::0::1::::HandActor<>Node2D<><>0<>0<><>::
 HurtArea.gd::GDScript::3163679764367311269::1780186325::0::1::::HurtArea<>Area2D<>res://Scenes/hurt_area_2d.svg<>0<>0<><>::
-Player.tscn::PackedScene::4181615598373502489::1780268875::0::1::::<><><>0<>0<><>::uid://by1cdgegutdbj::::res://Scripts/Knight.gd<>uid://dt8ianta1m2s8::::res://Assets/Sprites/knight swinging finish.png<>uid://col140yg6v1de::::res://Assets/brackeys_platformer_assets/sprites/knight.png<>uid://bdeq0hofnfi5h::::res://Scenes/hand_actor.gd<>uid://ddbpfombltmj2::::res://Scripts/hit_area_2d.gd<>uid://c83xsvc38yln6::::res://Assets/Sprites/sword.png<>uid://0b2g45omwmuy::::res://Assets/Sprites/Sword Swing.png
+Player.tscn::PackedScene::4181615598373502489::1780274063::0::1::::<><><>0<>0<><>::uid://by1cdgegutdbj::::res://Scripts/Knight.gd<>uid://dt8ianta1m2s8::::res://Assets/Sprites/knight swinging finish.png<>uid://col140yg6v1de::::res://Assets/brackeys_platformer_assets/sprites/knight.png<>uid://bdeq0hofnfi5h::::res://Scenes/hand_actor.gd<>uid://ddbpfombltmj2::::res://Scripts/hit_area_2d.gd<>uid://c83xsvc38yln6::::res://Assets/Sprites/sword.png<>uid://0b2g45omwmuy::::res://Assets/Sprites/Sword Swing.png
 world.tscn::PackedScene::1790352801769938687::1780196664::0::1::::<><><>0<>0<><>::uid://ds8vugu8uejxt::::res://Assets/brackeys_platformer_assets/sprites/platforms.png<>uid://b0tuulimgmxs0::::res://Scenes/Player.tscn<>uid://d13tp4iaff5ls::::res://Scenes/Goblins.tscn
-::res://Scripts/::1780268675
+::res://Scripts/::1780275458
 enemy.tscn::PackedScene::8967670014096128181::1780196286::0::1::::<><><>0<>0<><>::uid://dykerlctcsr3d::::res://enemy.gd<>uid://chw4vqnsjkbrf::::res://Assets/Sprites/Goblin.png<>uid://blcrlxc6b653n::::res://Scenes/HurtArea.gd
-Goblin.gd::GDScript::2688924716792905195::1780260666::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Goblin.gd::GDScript::2688924716792905195::1780275458::0::1::::<>CharacterBody2D<><>0<>0<><>::
 hit_area_2d.gd::GDScript::7372813397533932645::1780250710::0::1::::HitArea2D<>Area2D<>res://Scripts/hit_area_2d.svg<>0<>0<><>::
 hurt_area_2d.gd::GDScript::2092680069365828195::1780184389::0::1::::HurtArea2D<>Area2D<>res://Scripts/hurt_area_2d.svg<>0<>0<><>::
-Knight.gd::GDScript::4124753865598088143::1780268675::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Knight.gd::GDScript::4124753865598088143::1780274069::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player.gd::GDScript::3952109121157428394::1780190237::0::1::::<>Node2D<><>0<>0<><>::
 player.tscn::PackedScene::5745854631128164701::1780195778::0::1::::<><><>0<>0<><>::uid://bwkowo0mws45k::::res://Scripts/player.gd<>uid://b7tuxlwsfg6vv::::res://Assets/Sprites/knight 1.png<>uid://ddbpfombltmj2::::res://Scripts/hit_area_2d.gd<>uid://dt8ianta1m2s8::::res://Assets/Sprites/knight swinging finish.png<>uid://col140yg6v1de::::res://Assets/brackeys_platformer_assets/sprites/knight.png

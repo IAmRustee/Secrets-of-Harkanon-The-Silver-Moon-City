@@ -33,3 +33,9 @@ position = Vector2(-79, -26)
 
 [node name="Goblin" parent="." unique_id=346055443 instance=ExtResource("3_5a7ea")]
 position = Vector2(39, -28)
+
+[node name="Goblin2" parent="." unique_id=1322892465 instance=ExtResource("3_5a7ea")]
+position = Vector2(-117, 45)
+
+[node name="Goblin3" parent="." unique_id=600017076 instance=ExtResource("3_5a7ea")]
+position = Vector2(-106, -106)

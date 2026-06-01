@@ -1,4 +1,5 @@
-res://Scenes/Player.tscn
-res://Scripts/Knight.gd
 res://Scenes/Goblins.tscn
 res://Scripts/Goblin.gd
+res://Scripts/Knight.gd
+res://Scenes/Player.tscn
+res://Scenes/world.tscn
