@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ds8vugu8uejxt" path="res://Assets/brackeys_platformer_assets/sprites/platforms.png" id="1_a02cp"]
 [ext_resource type="PackedScene" uid="uid://b0tuulimgmxs0" path="res://Scenes/Player.tscn" id="2_go701"]
 [ext_resource type="PackedScene" uid="uid://d13tp4iaff5ls" path="res://Scenes/Goblins.tscn" id="4_8j60k"]
+[ext_resource type="PackedScene" uid="uid://dfyw2aq1kmgcb" path="res://Scenes/EnemySpawner.tscn" id="4_fo5ed"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a02cp"]
 texture = ExtResource("1_a02cp")
@@ -32,4 +33,7 @@ tile_set = SubResource("TileSet_go701")
 position = Vector2(-79, -26)
 
 [node name="Goblin" parent="." unique_id=346055443 instance=ExtResource("4_8j60k")]
-position = Vector2(121, -48)
+position = Vector2(191, 110)
+
+[node name="Node2D" parent="." unique_id=658949752 instance=ExtResource("4_fo5ed")]
+position = Vector2(125, -51)
