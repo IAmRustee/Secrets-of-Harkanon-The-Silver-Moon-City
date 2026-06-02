@@ -1,7 +1,4 @@
 res://Scenes/EnemySpawner.tscn
-res://EnemySpawner.gd
+res://Scripts/EnemySpawner.gd
 res://Scenes/world.tscn
-res://Scenes/Goblins.tscn
-res://character_body_2d.gd
-res://Scenes/enemySpawners.tscn
 res://Scenes/Player.tscn

@@ -1,19 +1,31 @@
 extends Node2D
-
+@onready var player = get_tree().get_first_node_in_group("player")
 @onready var enemy = preload("res://Scenes/Goblins.tscn")
+
+
 var enemy_counter := 0
+@export var max_enemies := 5
+
 func _on_timer_timeout() -> void:
-	var  ene = enemy.instantiate()
-	ene.position = position
-	get_parent().get_node("Goblin").add_child(ene)
-
-
-func spawn_enemy():
-	if enemy_counter >= 5:
+	if enemy_counter >= max_enemies:
+		$Timer.stop()
 		return
 
-	if enemy:
-		var enemy_instance = enemy.instantiate()
-		add_child(enemy_instance)
-		enemy_counter += 1
-		print("Enemy spawned! Total: ", enemy_counter)
+	spawn_enemy()
+
+func spawn_enemy():
+	var ene = enemy.instantiate()
+
+	var offset = Vector2(
+		randf_range(-100, 100),
+		randf_range(-100, 100)
+	)
+
+	ene.global_position = global_position + offset
+	get_tree().current_scene.add_child(ene)
+
+	enemy_counter += 1
+	
+func _on_RespawnTimer_timeout() -> void:
+	enemy_counter = 0
+	$Timer.start()
