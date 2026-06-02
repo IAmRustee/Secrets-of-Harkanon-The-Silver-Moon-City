@@ -1,4 +1,3 @@
-res://Scenes/EnemySpawner.tscn
+res://Scenes/Goblins.tscn
 res://Scripts/EnemySpawner.gd
-res://Scenes/world.tscn
-res://Scenes/Player.tscn
+res://Scripts/Goblin.gd

@@ -7,11 +7,12 @@ var enemy_counter := 0
 @export var max_enemies := 5
 
 func _on_timer_timeout() -> void:
-	if enemy_counter >= max_enemies:
-		$Timer.stop()
-		return
+	var enemies = get_tree().get_nodes_in_group("enemy")
 
-	spawn_enemy()
+	if enemies.size() < max_enemies:
+		spawn_enemy()
+
+	$Timer.wait_time = randf_range(2.0, 3.0)
 
 func spawn_enemy():
 	var ene = enemy.instantiate()
@@ -26,6 +27,9 @@ func spawn_enemy():
 
 	enemy_counter += 1
 	
-func _on_RespawnTimer_timeout() -> void:
-	enemy_counter = 0
-	$Timer.start()
+func _on_respawn_timer_timeout():
+	var enemies = get_tree().get_nodes_in_group("enemy")
+
+	if enemies.is_empty():
+		for i in range(max_enemies):
+			spawn_enemy()

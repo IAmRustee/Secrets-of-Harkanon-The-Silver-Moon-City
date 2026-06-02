@@ -15,6 +15,7 @@ func _ready():
 	player_chase = false
 	$AnimatedSprite2D.play("idle")
 	print("Started idle")
+	add_to_group("enemy")
 
 
 func _physics_process(delta):
@@ -61,3 +62,7 @@ func take_damage(amount: int) -> void:
 	print("Enemy hit!")
 	
 	
+func die():
+	var spawner = get_parent().get_node("EnemySpawner")
+	spawner.enemy_counter -= 1
+	queue_free()
