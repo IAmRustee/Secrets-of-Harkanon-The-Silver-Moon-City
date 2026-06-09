@@ -1,7 +1,7 @@
 extends Node2D
-@onready var player = get_tree().get_first_node_in_group("player")
+var player = null
 @onready var enemy = preload("res://Scenes/Goblins.tscn")
-
+var player_chase = false
 
 var enemy_counter := 0
 @export var max_enemies := 5
@@ -33,3 +33,11 @@ func _on_respawn_timer_timeout():
 	if enemies.is_empty():
 		for i in range(max_enemies):
 			spawn_enemy()
+
+
+
+
+func _on_detection_area_body_exited(_body):
+
+		GlobalSignal.player.disconnect(_body)
+		GlobalSignal.player_chase.disconnect(_body)

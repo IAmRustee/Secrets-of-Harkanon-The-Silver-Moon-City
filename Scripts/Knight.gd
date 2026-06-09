@@ -39,8 +39,6 @@ func Player_Movement(_delta):
 		$HandActor/Sprite2D/HitArea2D/Hitarea.disabled = false
 	else:
 		$HandActor/Sprite2D/HitArea2D/Hitarea.disabled = true
-
-
 	move_and_slide()
 
 	
