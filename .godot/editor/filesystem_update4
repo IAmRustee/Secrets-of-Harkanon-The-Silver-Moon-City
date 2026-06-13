@@ -1,7 +1,5 @@
-res://Scenes/EnemySpawner.tscn
-res://Scripts/EnemySpawner.gd
-res://Scenes/Player.tscn
 res://Scenes/Goblins.tscn
-res://GlobalSignal/GlobalSignal.gd
 res://Scripts/Goblin.gd
 res://Scripts/Knight.gd
+res://Scripts/hit_area_2d.gd
+res://Scenes/Player.tscn

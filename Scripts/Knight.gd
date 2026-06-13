@@ -7,6 +7,7 @@ var Player_Attack = true
 @onready var animation_player = $HandActor/Sprite2D/SwordSwing2D/AnimationPlayer
 @onready var sword_anim = $HandActor/Sprite2D/SwordAnmin
 var is_attacking = false
+var hp := 100
 func _physics_process(_delta: float) -> void:
 	Player_Movement(_delta)
 
@@ -52,3 +53,14 @@ func _ready():
 	for child in get_children():
 		print(child.name)
 	
+func take_damage(amount: int):
+	hp -= amount
+	print("Player HP: ", hp)
+
+	if hp <= 0:
+		die()
+
+
+func die():
+	print("Player died")
+	queue_free()
